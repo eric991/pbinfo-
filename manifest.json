@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "PbInfo++",
+  "version": "1.0",
+  "description": "PbInfo++",
+  "permissions": ["scripting","storage","tabs"],
+  "host_permissions": ["https://www.pbinfo.ro/*"],
+  "icons":{
+      "32":"favicon.png"
+   },
+  "action": {
+	  "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.pbinfo.ro/probleme/*"],
+      "js": ["etichete/content.js", "copy/content.js"],
+	  "css": ["copy/content.css"],
+      "run_at": "document_idle"
+    },
+	{
+      "matches": ["https://www.pbinfo.ro/*"],
+      "js": ["hideip/content.js"],
+      "run_at": "document_idle"
+    },
+	{
+      "matches": ["https://www.pbinfo.ro/?pagina=teme-lista&subpagina=editare&ss=rezolvari&id=*"],
+      "js": ["source_compare/string-similarity.min.js","source_compare/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

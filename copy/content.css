@@ -1,0 +1,47 @@
+.my-copy-button {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 9999;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#enunt > pre:hover .my-copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-copy-button:active {
+  transform: scale(0.9);
+}
+
+.my-copy-button.pressed-animation {
+  animation: buttonPress 0.3s ease;
+}
+
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+    background-color: #fff;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #e0e0e0;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #fff;
+  }
+}
+
+.my-copy-button:hover {
+  background-color: #f0f0f0;
+}

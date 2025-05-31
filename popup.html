@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<!-- Se incarca fisierul JavaScript care contine logica din spate -->
+		<script src="popup.js"></script>
+
+		<!-- Se incarca fisierul CSS pentru stilul elementelor -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!-- Rand cu un buton care activeaza/dezactiveaza afisarea etichetelor tot timpul -->
+		<div style="display: flex; align-items: center; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 14px;">
+			<label class="switch">
+				<!-- Checkbox pentru optiunea "afiseaza etichetele mereu" -->
+				<input type="checkbox" id="show_etichete">
+				<!-- Partea vizuala a comutatorului -->
+				<span class="slider round"></span>
+			</label>
+			<!-- Textul de langa buton -->
+			<span class="switch_text">Afiseaza etichetele mereu</span>
+		</div>
+
+		<!-- Rand cu buton care ascunde etichetele chiar si daca ai 100 de puncte -->
+		<div style="display: flex; align-items: center; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 14px;">
+			<label class="switch">
+				<input type="checkbox" id="hide100">
+				<span class="slider round"></span>
+			</label>
+			<span class="switch_text">Ascunde etichetele si cand ai 100 de puncte</span>
+		</div>
+
+		<!-- Rand cu buton pentru activarea unei functii de copiere date de intrare/iesire -->
+		<div style="display: flex; align-items: center; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 14px;">
+			<label class="switch">
+				<input type="checkbox" id="copytoggle">
+				<span class="slider round"></span>
+			</label>
+			<span class="switch_text">Buton copiere date intrare/iesire</span>
+		</div>
+
+		<!-- Rand cu buton care ascunde IP-ul de la finalul paginii -->
+		<div style="display: flex; align-items: center; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 14px;">
+			<label class="switch">
+				<input type="checkbox" id="hideip">
+				<span class="slider round"></span>
+			</label>
+			<span class="switch_text">Ascunde adresa ip din josul paginii</span>
+		</div>
+	</body>
+</html>
+
