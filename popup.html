@@ -5,22 +5,29 @@
 
 		<!-- Se incarca fisierul CSS pentru stilul elementelor -->
 		<link rel="stylesheet" href="style.css">
+		
+		<!-- ne asiguram ca nu avem popup-ul prea mare -->
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				width: max-content;
+				height: max-content;
+			}
+		</style>
 	</head>
-	<body>
-		<!-- Rand cu un buton care activeaza/dezactiveaza afisarea etichetelor tot timpul -->
-		<div style="display: flex; align-items: center; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 14px;">
+	<body style="margin:0px;">
+		<!-- buton care activeaza/dezactiveaza afisarea etichetelor tot timpul -->
+		<div style="display: flex; align-items: center;font-family: Arial, sans-serif; font-size: 14px; margin:8px">
 			<label class="switch">
-				<!-- Checkbox pentru optiunea "afiseaza etichetele mereu" -->
 				<input type="checkbox" id="show_etichete">
-				<!-- Partea vizuala a comutatorului -->
 				<span class="slider round"></span>
 			</label>
-			<!-- Textul de langa buton -->
 			<span class="switch_text">Afiseaza etichetele mereu</span>
 		</div>
 
-		<!-- Rand cu buton care ascunde etichetele chiar si daca ai 100 de puncte -->
-		<div style="display: flex; align-items: center; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 14px;">
+		<!-- buton care ascunde etichetele chiar si daca ai 100 de puncte -->
+		<div style="display: flex; align-items: center;font-family: Arial, sans-serif; font-size: 14px; margin:8px">
 			<label class="switch">
 				<input type="checkbox" id="hide100">
 				<span class="slider round"></span>
@@ -28,8 +35,8 @@
 			<span class="switch_text">Ascunde etichetele si cand ai 100 de puncte</span>
 		</div>
 
-		<!-- Rand cu buton pentru activarea unei functii de copiere date de intrare/iesire -->
-		<div style="display: flex; align-items: center; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 14px;">
+		<!-- buton pentru activarea unei functii de copiere date de intrare/iesire -->
+		<div style="display: flex; align-items: center;font-family: Arial, sans-serif; font-size: 14px; margin:8px">
 			<label class="switch">
 				<input type="checkbox" id="copytoggle">
 				<span class="slider round"></span>
@@ -37,13 +44,18 @@
 			<span class="switch_text">Buton copiere date intrare/iesire</span>
 		</div>
 
-		<!-- Rand cu buton care ascunde IP-ul de la finalul paginii -->
-		<div style="display: flex; align-items: center; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 14px;">
+		<!-- buton care ascunde IP-ul de la finalul paginii -->
+		<div style="display: flex; align-items: center;font-family: Arial, sans-serif; font-size: 14px; margin:8px">
 			<label class="switch">
 				<input type="checkbox" id="hideip">
 				<span class="slider round"></span>
 			</label>
 			<span class="switch_text">Ascunde adresa ip din josul paginii</span>
+		</div>
+		
+		<!-- imaginea cu Pbinfo++ -->
+		<div style="display: flex; height:30px; background-color: #5987C8;justify-content: center; align-items: center;">
+			<img src="pbinfo5.png" style="height:25px; align: center;">
 		</div>
 	</body>
 </html>
